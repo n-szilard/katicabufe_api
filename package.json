@@ -1,0 +1,19 @@
+{
+  "name": "katicabufe_api",
+  "version": "1.0.0",
+  "description": "Katica büfé api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n-szilard/katicabufe_api.git"
+  },
+  "author": "Nagyapáti Szilárd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n-szilard/katicabufe_api/issues"
+  },
+  "homepage": "https://github.com/n-szilard/katicabufe_api#readme"
+}
