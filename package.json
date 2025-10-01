@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/n-szilard/katicabufe_api/issues"
   },
-  "homepage": "https://github.com/n-szilard/katicabufe_api#readme"
+  "homepage": "https://github.com/n-szilard/katicabufe_api#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
