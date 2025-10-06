@@ -1,6 +1,24 @@
 ### get kategories
-GET http://localhost:3000/kategories
+GET http://localhost:3000/categories
 Content-Type: application/json
+
+### get category by id
+GET http://localhost:3000/categories/1
+Content-Type: application/json
+
+
+### delete category by id
+DELETE http://localhost:3000/categories/4
+Content-Type: application/json
+
+### post new category
+POST http://localhost:3000/categories/
+Content-Type: application/json
+
+{
+    "kategoriaNev": "Desszertek"
+}
+
 
 
 ### get forgalom
