@@ -1,0 +1,8 @@
+### get kategories
+GET http://localhost:3000/kategories
+Content-Type: application/json
+
+
+### get forgalom
+GET http://localhost:3000/traffic
+Content-Type: application/json
