@@ -16,11 +16,60 @@ POST http://localhost:3000/categories/
 Content-Type: application/json
 
 {
+    "kategoriaNev": "Proba"
+}
+
+### PATCH category
+PATCH http://localhost:3000/categories/3
+Content-Type: application/json
+
+{
     "kategoriaNev": "Desszertek"
 }
 
 
-
 ### get forgalom
 GET http://localhost:3000/traffic
+Content-Type: application/json
+
+### get traffic by id
+GET http://localhost:3000/traffic/250
+Content-Type: application/json
+
+
+### POST traffic
+POST http://localhost:3000/traffic
+Content-Type: application/json
+
+{
+    "termek": "abc",
+    "vevo": "Pista",
+    "kategoriaId": 3,
+    "egyseg": "db",
+    "nettoar": 500,
+    "mennyiseg": 6,
+    "kiadva": 1
+}
+
+### PATCH traffic by id
+PATCH http://localhost:3000/traffic/259
+Content-Type: application/json
+
+{
+    "termek": "Lángos",
+    "vevo": "Pista",
+    "kategoriaId": 3,
+    "egyseg": "db",
+    "nettoar": 5000,
+    "mennyiseg": 1,
+    "kiadva": 1
+}
+
+### DELETE traffic by id
+DELETE http://localhost:3000/traffic/260
+Content-Type: application/json
+
+
+### GET statistics
+GET http://localhost:3000/statistics
 Content-Type: application/json
