@@ -73,3 +73,7 @@ Content-Type: application/json
 ### GET statistics
 GET http://localhost:3000/statistics
 Content-Type: application/json
+
+### GET distinct products
+GET http://localhost:3000/products
+Content-Type: application/json
