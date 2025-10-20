@@ -1,5 +1,10 @@
+@host = http://localhost
+@port = 3000
+
+@url = {{host}}:{{port}}
+
 ### get kategories
-GET http://localhost:3000/categories
+GET {{url}}/categories
 Content-Type: application/json
 
 ### get category by id

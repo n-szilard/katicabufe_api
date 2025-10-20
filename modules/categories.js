@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../utils/database')
+const pool = require('../utils/database');
+const logger = require('../utils/logger');
 
 // Select All categories
 router.get('/', (req, res) => {
     pool.query('SELECT * FROM kategoria', (error, results) => {
         if (error) return res.status(500).json({errno: error.errno, msg: 'Hiba történt az adatbázis lekérdezése közben.', error: error.message});
+        logger.info(`[GET /categories] -> ${results.length} rekord küldve válaszként.`)
         res.send(results)
     })
 });
