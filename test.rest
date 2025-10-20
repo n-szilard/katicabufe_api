@@ -77,3 +77,14 @@ Content-Type: application/json
 ### GET distinct products
 GET http://localhost:3000/products
 Content-Type: application/json
+
+### POST product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "termekNev": "teszt termék",
+    "nettoAr": 300,
+    "egyseg": "db",
+    "kategoriaId": 2
+}

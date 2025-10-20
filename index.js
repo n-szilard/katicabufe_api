@@ -20,7 +20,7 @@ app.use('/products', productRoutes)
 
 
 app.get('/', (req, res) => {
-    res.send('Nagyapáti Szilárd 13.A időjárás api');
+    res.send('Nagyapáti Szilárd 13.A katica api');
 });
 
 
