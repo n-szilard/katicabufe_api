@@ -11,6 +11,25 @@ router.get('/', (req, res) => {
     })
 })
 
+// post vevo
+router.post('/', (req, res) => {
+    let {nev} = req.body;
+    /// nev 0??
+    pool.query('INSERT INTO `vevo` (`nev`) VALUES (?)', [nev] ,(error, results) => {
+        if (error) throw error;
+        res.send(results);
+    })
+})
+
+// get vevo by id
+router.get('/:id', (req, res) => {
+    let id = req.params.id;
+    pool.query('SELECT * FROM vevo WHERE id=?', [id] , (error, results) => {
+        if (error) throw error;
+        res.send(results);
+    })
+})
+
 // delete vevo
 router.delete('/:id', (req, res) => {
     let id = req.params.id;
@@ -23,8 +42,8 @@ router.delete('/:id', (req, res) => {
 // patch vevo
 router.patch('/:id', (req, res) => {
     let id = req.params.id;
-    let ujNev = req.body.ujNev;
-    pool.query('UPDATE `vevo` SET `nev`=? WHERE id=?', [ujNev, id] , (error, results) => {
+    let {nev} = req.body;
+    pool.query('UPDATE `vevo` SET `nev`=? WHERE id=?', [nev, id] , (error, results) => {
         if (error) throw error;
         res.send(results);
     })

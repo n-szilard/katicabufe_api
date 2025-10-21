@@ -79,7 +79,7 @@ Content-Type: application/json
 GET http://localhost:3000/statistics
 Content-Type: application/json
 
-### GET distinct products
+### GET products
 GET http://localhost:3000/products
 Content-Type: application/json
 
@@ -92,4 +92,41 @@ Content-Type: application/json
     "nettoAr": 300,
     "egyseg": "db",
     "kategoriaId": 2
+}
+
+
+### get one product by id
+GET {{url}}/products/2
+Content-Type: application/json
+
+### get all vevo
+GET {{url}}/customers
+Content-Type: application/json
+
+
+### get vevo by id
+GET {{url}}/customers/2
+Content-Type: application/json
+
+
+### patch vevo by id
+PATCH {{url}}/customers/6
+Content-Type: application/json
+
+{
+    "nev": "Pista"
+}
+
+
+### delete vevo by id
+DELETE {{url}}/customers/3
+Content-Type: application/json
+
+
+### POST vevo
+POST {{url}}/customers
+Content-Type: application/json
+
+{
+    "nev": "Sanyi"
 }
