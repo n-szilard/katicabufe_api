@@ -9,6 +9,7 @@ const traffic = require('./modules/traffic')
 const statisticsRoutes = require('./modules/statistics')
 const productRoutes = require('./modules/products')
 const customerRoutes = require('./modules/customers')
+const priceListRoutes = require('./modules/priceList')
 
 
 const app = express();
@@ -22,6 +23,7 @@ app.use('/traffic', traffic);
 app.use('/statistics', statisticsRoutes);
 app.use('/products', productRoutes);
 app.use('/customers', customerRoutes);
+app.use('/pricelist', priceListRoutes);
 
 app.get('/', (req, res) => {
     res.send('Nagyapáti Szilárd 13.A katica api');

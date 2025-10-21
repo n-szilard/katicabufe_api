@@ -130,3 +130,8 @@ Content-Type: application/json
 {
     "nev": "Sanyi"
 }
+
+
+### get pricelist
+GET {{url}}/pricelist
+Content-Type: application/json
