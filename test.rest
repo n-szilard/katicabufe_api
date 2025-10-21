@@ -105,7 +105,7 @@ Content-Type: application/json
 
 
 ### get vevo by id
-GET {{url}}/customers/2
+GET {{url}}/customers/6
 Content-Type: application/json
 
 

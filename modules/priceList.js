@@ -1,15 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../utils/database');
+const {query} = require('../utils/database');
 
 router.get('/', (req, res) => {
     let vegeredmeny = [];
-    pool.query('SELECT * FROM kategoria', (error, catResults) => {
-        pool.query('SELECT * from termek', (error, prodResults) => {
+    query('SELECT * FROM kategoria', [],(error, catResults) => {
+        query('SELECT * from termek', [],(error, prodResults) => {
             catResults = JSON.parse(JSON.stringify(catResults));
             prodResults = JSON.parse(JSON.stringify(prodResults));
-            console.log(catResults);
-            console.log(prodResults)
 
             catResults.forEach(category => {
                 stimmtermekek = []
@@ -21,15 +19,16 @@ router.get('/', (req, res) => {
                         })
                     }
                 })
+                
                 vegeredmeny.push({
                     kategoria: category.kategoriaNev,
                     termekek: stimmtermekek
                 })
             });
             res.send(vegeredmeny)
-        })
+        }, req)
         if (error) return res.status(500).json({errno: error.errno, msg: 'Hiba történt az adatbázis lekérdezése közben.', error: error.message});
-    })
+    }, req)
 });
 
 module.exports = router;
